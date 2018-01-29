@@ -16,7 +16,7 @@ public class TestInit {
 
     @BeforeSuite
 
-    public static void setUp()  {
+    public static void setUp() {
 
         setProperty("webdriver.chrome.driver", "c:/Selenium/Tools/chromedriver.exe");
 
