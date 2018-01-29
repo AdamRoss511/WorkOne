@@ -39,34 +39,36 @@ public class HomeWorkPartOne {
     }
     public static WebElement contactFormLabel() {
 
-        return driver.findElement(By.xpath(".//*[@id='mCSB_1_container']"));
+        return driver.findElement(By.xpath("//*[@id='mCSB_1_container']"));
 
     }
     public static WebElement contactFormName() {
-        return driver.findElement(By.id("Login"));
+        return driver.findElement(By.xpath("//*[@id='Name']"));
     }
 
     public static WebElement contactFormLastName() {
-        return driver.findElement(By.id("Login"));
+        return driver.findElement(By.xpath("//*[@id='LastName']"));
     }
 
     public static WebElement contactFormDescription() {
-        return driver.findElement(By.id("Login"));
+        return driver.findElement(By.xpath("//*[@id='Description']"));
     }
 
-
+    public static WebElement submitButton() {
+        return driver.findElement(By.xpath("//*[@id='user-data']/button"));
+    }
 
 
 
 
     public static void login(){
-        userIcon().click();
-        loginField().sendKeys("epam");
-        passwordField().sendKeys("1234");
-        enterButton().click();
+          userIcon().click();
+          loginField().sendKeys("epam");
+          passwordField().sendKeys("1234");
+          enterButton().click();
     }
     public static void logout(){
-        logoutButton().click();
+          logoutButton().click();
 
     }
     public static boolean isLoggedIn(){return userName().isDisplayed();}{
@@ -79,11 +81,15 @@ public class HomeWorkPartOne {
 
     public static void openContactForm(){
            contactFormLabel().click();
-    }
-    public static void filloutContactForm(){
 
     }
+    public static void filloutContactForm(){
+          contactFormName().sendKeys("Vladimir");
+          contactFormLastName().sendKeys("Nemtcev");
+          contactFormDescription().sendKeys("Student");
+    }
     public static void submit(){
+        submitButton().click();
 
     }
     public static void verification(){
