@@ -2,7 +2,12 @@ package epam.Automation;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+
+import java.sql.Driver;
+import java.sql.DriverManager;
+
 import static java.lang.System.setProperty;
 
 public class TestInit {
@@ -19,5 +24,9 @@ public class TestInit {
         driver.manage().window().maximize();
         driver.navigate().to(" https://epam.github.io/JDI/index.html");
 
-    }
+        }
+    @AfterSuite
+
+           DriverManager.driver.quit();
+
 }

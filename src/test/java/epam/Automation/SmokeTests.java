@@ -3,9 +3,7 @@ package epam.Automation;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static epam.Automation.HomeWorkPartOne.isLoggedIn;
-import static epam.Automation.HomeWorkPartOne.login;
-import static epam.Automation.HomeWorkPartOne.logout;
+import static epam.Automation.HomeWorkPartOne.*;
 
 public class SmokeTests extends TestInit {
 
@@ -16,4 +14,26 @@ public class SmokeTests extends TestInit {
         logout();
         Assert.assertFalse(isLoggedIn());
     }
+
+    @Test
+    public void logoutSupportTest(){
+
+        login();
+        openSupportPage();
+        logout();
+        Assert.assertFalse(isLoggedIn());
+    }
+
+    @Test
+    public void contactFormTest(){
+
+        login();
+        openContactForm();
+        filloutContactForm();
+        submit();
+        verification(;)
+        Assert.assertFalse(isLoggedIn());
+    }
+
+
 }

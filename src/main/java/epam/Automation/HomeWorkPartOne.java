@@ -32,6 +32,32 @@ public class HomeWorkPartOne {
     }
 
 
+    public static WebElement supportLabel() {
+
+        return driver.findElement(By.xpath("//*[@id='mCSB_1_container']/ul/li"));
+
+    }
+    public static WebElement contactFormLabel() {
+
+        return driver.findElement(By.xpath(".//*[@id='mCSB_1_container']"));
+
+    }
+    public static WebElement contactFormName() {
+        return driver.findElement(By.id("Login"));
+    }
+
+    public static WebElement contactFormLastName() {
+        return driver.findElement(By.id("Login"));
+    }
+
+    public static WebElement contactFormDescription() {
+        return driver.findElement(By.id("Login"));
+    }
+
+
+
+
+
 
     public static void login(){
         userIcon().click();
@@ -42,10 +68,26 @@ public class HomeWorkPartOne {
     public static void logout(){
         logoutButton().click();
 
+    }
+    public static boolean isLoggedIn(){return userName().isDisplayed();}{
 
     }
-    public static boolean isLoggedIn(){return userName().isDisplayed();}
 
+    public static void openSupportPage(){
+           supportLabel().click();
+    }
 
+    public static void openContactForm(){
+           contactFormLabel().click();
+    }
+    public static void filloutContactForm(){
+
+    }
+    public static void submit(){
+
+    }
+    public static void verification(){
+
+    }
 
 }
