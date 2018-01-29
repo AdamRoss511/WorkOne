@@ -1,4 +1,4 @@
 package epamAutomation;
 
-public class SmokeTests {
+public class SmokeTests extends TestInit {
 }
